@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
         <nav class="header-navigation "> 
         <a class="header-logo link " href="./index.html">Web<span class="studio-text">Studio</span></a>          
         <ul class="header-list list">
-        <li class="header-item"> <a class="header-link link" href="./index.html">Studio</a> </li>
+        <li class="header-item"> <a class="header-link current link" href="./index.html">Studio</a> </li>
         <li class="header-item"> <a class="header-link link" href="./portfolio.html">Portfolio</a></li>
         <li class="header-item"> <a class="header-link link" href=""> Contacts</a></li>
     </ul>
@@ -35,7 +36,7 @@
             <div class="container">
             <h1 class="first-tittle">Effective Solutions
             for Your Business</h1>
-            <button class="first-button" type="button">Order Service</button>
+            <button class="first-button" type="button" data-modal-open>Order Service</button>
         </div>
         </section>
         <section class="second">
@@ -294,5 +295,19 @@
             </div>
         </div>
             </footer>
+            <div class="backdrop is-hidden" data-modal>
+             <div class="modal">
+                <button class="modal-close-btn" type="button" data-modal-close>
+                    <svg width="8" height="8">
+                        <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+                    </svg>
+                </button>
+             </div>   
+            </div>
+            <script src="./js/modal.js"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+              </script>
 </body>
 </html>
