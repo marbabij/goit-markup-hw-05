@@ -199,24 +199,16 @@ border: 1px solid #E7E9FC;
 box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1),
  0px 0px 0px rgba(0, 0, 0, 0.08), 
  0px 0px 0px rgba(0, 0, 0, 0.12);
- transition: background-color var(--main-transition), 
- box-shadow var(--main-transition), 
- border-color var(--main-transition) ;
+ 
 }
 .btn:hover{
     background-color: var(--focus-hover-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-border-color: var(--focus-hover-color);
-}
-.btn-text:hover{
-    color:var(--main-title-color);
+    border-color: var(--focus-hover-color);
 }
 .btn:focus{
     background-color: var(--focus-hover-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.btn-text:focus{
-    color:var(--main-title-color);
 }
 .btn-text{
     font-family: "Roboto", sans-serif;
@@ -228,7 +220,13 @@ align-items: center;
 text-align: center;
 letter-spacing: 0.04em;
 color:var(--third-tittle-color);
-transition: color var(--main-transition);
+transition: color var(--main-transition), background-color var(--main-transition), box-shadow var(--main-transition), border-color var(--main-transition), color var(--main-transition);
+}
+.btn-text:hover{
+    color:var(--main-title-color);
+}
+.btn-text:focus{
+    color:var(--main-title-color);
 }
 .button-list{
     display: flex;
@@ -262,15 +260,15 @@ transition: color var(--main-transition);
 .picture-top-text{
     position: absolute;
     top: 0;
+    left: 0;
     font-size: 16px;
     font-weight: 400;
     color:#F4F4FD;
     line-height: 24px;
-   padding-left: 32px;
-   padding-right: 32px;
-    padding-top: 40px;
+   padding: 40px 32px 0;
     background-color: #4D5AE5;
     height: 100%;
+    width: 100%;
     transform: translateY(100%);
     transition: transform var(--main-transition);
 }
@@ -544,9 +542,11 @@ margin-bottom: 16px;
 .backdrop{
     position: fixed;
     top: 0;
+    left: 0;
     background: rgba(46, 47, 66, 0.4);
     width: 100%;
     height: 100%;
+    opacity: 1;
     transition: opasity var(--main-transition), 
     visibility var(--main-transition) ;
 }
@@ -579,8 +579,10 @@ justify-content: center;
 position: absolute;
 top: 24px;
 right: 24px;
+cursor: pointer;
 
 }
+
 .is-hidden{
     opacity: 0;
     visibility: hidden;
